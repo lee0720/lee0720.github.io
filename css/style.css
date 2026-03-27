@@ -1,0 +1,157 @@
+style.css
+/* 基本設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* ヘッダー・フッター */
+header, footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* プロフィールカード */
+.profile-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin-bottom: 20px;
+}
+
+h2 { margin-bottom: 5px; }
+.tagline {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* スキルリスト */
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background: #e9ecef;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* ボタンデザイン */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+}
+
+.btn.primary {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.btn.primary:hover {
+    background: #0056b3;
+}
+/* 制作実績セクションのスタイル */
+.works {
+    margin-top: 40px;
+}
+
+.works h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* グリッドの設定 */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 横幅に合わせて自動調整 */
+    gap: 20px;
+}
+
+/* 各作品のカード */
+.work-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* 画像の角を丸めるため */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.work-item:hover {
+    transform: translateY(-5px); /* ホバー時に少し浮かす */
+}
+
+.work-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.work-info {
+    padding: 15px;
+}
+
+.work-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.work-info p {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.view-link {
+    font-size: 0.8em;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
