@@ -303,49 +303,36 @@ img {
 
 /* ===== About ===== */
 /* Aboutセクション全体のレイアウト */
+/* ===== About (整理版) ===== */
 .about-content {
   display: flex;
-  flex-direction: column; /* スマホでは縦並び */
+  flex-direction: column;
   align-items: center;
-  gap: 40px;            /* 画像とテキストの間隔 */
+  gap: 40px;
   margin-top: 30px;
 }
 
-/* プロフィール画像の設定 */
 .about-image img {
-  width: 200px;         /* 画像のサイズ（お好みで調整） */
+  width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;   /* 丸くする場合 */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border: 3px solid var(--color-border); /* 枠線を馴染ませる */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* テキスト部分の調整 */
 .about-text {
   flex: 1;
   line-height: 1.8;
+  text-align: left; /* テキストは左揃えが読みやすい */
 }
 
-.about-meta {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  background-color: #f9f9f9; /* 資格などのリストを少し目立たせる */
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.about-meta li {
-  margin-bottom: 10px;
-}
-
-/* PCサイズ（768px以上）の時の配置 */
 @media (min-width: 768px) {
   .about-content {
-    flex-direction: row;      /* 横並びにする */
-    align-items: flex-start;  /* 上揃え */
-    text-align: left;
+    flex-direction: row; /* PCで横並び */
+    align-items: flex-start;
   }
+}
   
   .about-image {
     flex-shrink: 0;           /* 画像が潰れないように固定 */
