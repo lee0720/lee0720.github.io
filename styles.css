@@ -302,17 +302,54 @@ img {
 }
 
 /* ===== About ===== */
+/* Aboutセクション全体のレイアウト */
 .about-content {
-  max-width: 560px;
+  display: flex;
+  flex-direction: column; /* スマホでは縦並び */
+  align-items: center;
+  gap: 40px;            /* 画像とテキストの間隔 */
+  margin-top: 30px;
 }
 
-.about-text p {
-  margin: 0 0 var(--space-md);
-  color: var(--color-text-muted);
+/* プロフィール画像の設定 */
+.about-image img {
+  width: 200px;         /* 画像のサイズ（お好みで調整） */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;   /* 丸くする場合 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.about-text p:last-child {
-  margin-bottom: 0;
+/* テキスト部分の調整 */
+.about-text {
+  flex: 1;
+  line-height: 1.8;
+}
+
+.about-meta {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  background-color: #f9f9f9; /* 資格などのリストを少し目立たせる */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-meta li {
+  margin-bottom: 10px;
+}
+
+/* PCサイズ（768px以上）の時の配置 */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;      /* 横並びにする */
+    align-items: flex-start;  /* 上揃え */
+    text-align: left;
+  }
+  
+  .about-image {
+    flex-shrink: 0;           /* 画像が潰れないように固定 */
+  }
 }
 
 /* ===== Skills ===== */
