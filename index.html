@@ -1,182 +1,92 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | </title>
-  <meta name="description" content="Leeのポートフォリオサイトです。スキル・制作物・連絡先をご紹介しています。" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="櫻井一利のポートフォリオ。インフラ・セキュリティ分野の学習、保有資格、制作物をご紹介します。">
+  <meta name="theme-color" content="#0a1222">
+  <title>櫻井一利 | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
   <header class="header">
-    <nav class="nav">
-      <a href="#hero" class="nav-logo">Portfolio</a>
-      <button type="button" class="nav-toggle" aria-label="メニューを開く">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <nav class="nav container" aria-label="メインナビゲーション">
+      <a class="nav-logo" href="#hero"><span class="logo-mark">&lt;/&gt;</span> KAZUTOSHI <span class="logo-light">/ PORTFOLIO</span></a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#works">Works</a></li><li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-
-  <main>
-    <section id="hero" class="hero">
-      <div class="hero-inner">
-        <p class="hero-label">Welcome to my portfolio</p>
-        <h1 class="hero-title">こんにちは。<br />ポートフォリオへようこそ。</h1>
-        <p class="hero-desc">Web制作・開発のスキルと制作物をまとめています。</p>
-        <a href="#works" class="btn btn-primary">制作物を見る</a>
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow"><span class="status-dot"></span> INFRASTRUCTURE &amp; SECURITY</p>
+        <p class="hero-intro">Welcome to my portfolio</p>
+        <h1 id="hero-title">技術を学び、<br><span class="gradient-text">信頼を支える。</span></h1>
+        <p class="hero-desc">櫻井 一利 / Kazutoshi Sakurai<br>インフラ・セキュリティ領域を目指し、学習と制作に取り組んでいます。</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#works">制作物を見る <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#about">プロフィールを見る</a></div>
+        <p class="hero-note">Python · Networking · Security</p>
       </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span>Scroll</span>
-        <span class="hero-scroll-line"></span>
-      </div>
+      <a class="hero-scroll" href="#about">SCROLL <span aria-hidden="true">↓</span></a>
     </section>
-
-    <section id="about" class="section about">
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
-        <h2 class="section-title">About</h2>
+        <div class="section-heading"><p class="section-kicker">01 / PROFILE</p><h2 id="about-title">About <span>Me</span></h2><p>学び続ける姿勢を、実践につなげる。</p></div>
         <div class="about-content">
-          <div class="about-image">
-        <img src="images/profile.jpg" alt="Leeのプロフィール写真">
-      </div>
+          <div class="about-image"><img src="images/profile.jpg" alt="プロフィール画像" onerror="this.parentElement.classList.add('image-missing');this.remove()"><span class="image-fallback" aria-hidden="true">KS</span></div>
           <div class="about-text">
-            <p>
-              はじめまして、櫻井一利です。インフラエンジニア志望として、基礎を重視しながら継続的に学習・制作に取り組んでいます。
-            </p>
-            <ul class="about-meta">
-              <li><strong>志望職種：</strong> インフラエンジニア（将来的にセキュリティ領域）</li>
-              <li><strong>取得資格：</strong> 応用情報技術者試験、Python認定基礎、データ分析</li>
-              <li><strong>強み：</strong> 目標達成への遂行力、計画性、粘り強さ</li>
-              <li><strong>取り組み：</strong> Web制作・開発に加えて、インフラ/セキュリティ学習を継続中</li>
-            </ul>
-            <p>
-              資格を取得しつつ、現場で必要な知識を着実に積み上げ、運用と改善を継続できるエンジニアを目指しています。ご連絡お待ちしています。
-              <!--家族のトゲピーです。-->
-            </p>
+            <h3>櫻井 一利 <small>（さくらい かずとし）</small></h3>
+            <p>インフラエンジニアを志望し、ネットワークやセキュリティの基礎を大切にしながら、資格学習とアプリ制作に取り組んでいます。</p>
+            <p>知識を学ぶだけでなく、Pythonなどを使った制作を通じて、技術を実際に活用する力を磨いています。将来的にはセキュリティ領域で、安定したシステム運用と改善に貢献したいと考えています。</p>
+            <div class="about-tags"><span>継続的な学習</span><span>ネットワーク</span><span>セキュリティ</span><span>Python</span></div>
+            <p class="small-note">※プロフィール写真は任意です。写真を掲載しない場合はイニシャルが表示されます。</p>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <ul class="skills-list">
-          <li class="skill-item">
-            <span class="skill-name">Python</span>
-            <span class="skill-desc">Excelの自動化、認定基礎試験。</span>
-          </li>
-          <li class="skill-item">
-            <span class="skill-name">HTML / CSS</span>
-            <span class="skill-desc">レスポンシブなレイアウト、モダンなスタイリング</span>
-          </li>
-          <li class="skill-item">
-            <span class="skill-name">JavaScript</span>
-            <span class="skill-desc">フロントエンドのインタラクション</span>
-          </li>
-          </li>
-          <li class="skill-item">
-            <span class="skill-name">応用情報技術者試験</span>
-            <span class="skill-desc">2025年10月取得</span>
-          </li>
-          </li>
-          <li class="skill-item">
-            <span class="skill-name">Python認定基礎試験・データ分析試験</span>
-            <span class="skill-desc">2026年に取得</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="works" class="section works">
-      <div class="container">
-        <h2 class="section-title">Works</h2>
-        <ul class="works-list">
-          <li class="work-item">
-            <div class="work-card">
-              <div class="work-placeholder">AI-SECURITY-LOG-ANALYZER</div>
-               <div class="work-info">
-                <h3 class="work-title">AI-SECURITY-LOG-ANALYZER</h3>
-                <p class="work-desc">セキュリティログの分析アプリ</p>
-                <a href="https://ai-security-log-analyzer-lee0720.streamlit.app/" class="work-link" target="_blank" rel="noopener">リンク・GitHub など</a>
-              </div>
-            </div>
-          </li>
-          <li class="work-item">
-            <div class="work-card">
-              <div class="work-placeholder">SOC体験ゲーム</div>
-              <div class="work-info">
-                <h3 class="work-title">SOC体験ゲーム</h3>
-                <p class="work-desc">SOCを体験できるゲームです。</p>
-                <a href="https://soc-log-defense-lee0720.streamlit.app/" class="work-link" target="_blank" rel="noopener">リンク</a>
-              </div>
-            </div>
-          </li>
-          <li class="work-item">
-            <div class="work-card">
-              <div class="work-placeholder">ToDoアプリ</div>
-              <div class="work-info">
-                <h3 class="work-title">Todoアプリ</h3>
-                <p class="work-desc">Pythonでバックエンドが動いています。</p>
-                <a href="https://todoapp-1-jaf6.onrender.com/" class="work-link" target="_blank" rel="noopener">リンク</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-content">
-          <p>お問い合わせは以下のリンクからお願いします。</p>
-          <ul class="contact-links">
-            <li><a href="https://github.com/lee0720" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="mailto:kazutoshi19920720@gmail.com">Email</a></li>
-            <li><a href="#" target="_blank" rel="noopener">X (Twitter)</a></li>
-          </ul>
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container"><div class="section-heading"><p class="section-kicker">02 / EXPERTISE</p><h2 id="skills-title">Skills <span>&amp; Certifications</span></h2><p>基礎から着実に積み上げてきた技術と学習成果。</p></div>
+        <div class="skills-grid">
+          <article class="skill-card"><span class="card-icon" aria-hidden="true">⌘</span><h3>Network &amp; Infrastructure</h3><p>ネットワークの基礎知識、インフラ領域の学習</p><div class="chip-row"><span>CCNA</span><span>ネットワーク</span></div></article>
+          <article class="skill-card"><span class="card-icon" aria-hidden="true">◇</span><h3>Security</h3><p>情報セキュリティ、認証、脆弱性対策などを学習</p><div class="chip-row"><span>応用情報技術者</span><span>セキュリティ学習</span></div></article>
+          <article class="skill-card"><span class="card-icon" aria-hidden="true">{ }</span><h3>Programming &amp; Web</h3><p>Pythonによるアプリ制作とWebサイト制作</p><div class="chip-row"><span>Python</span><span>HTML / CSS</span><span>JavaScript</span></div></article>
         </div>
+        <div class="cert-panel"><h3>取得資格</h3><ul class="cert-list"><li>CCNA</li><li>応用情報技術者試験</li><li>基本情報技術者試験</li><li>Python 3 エンジニア認定基礎試験</li></ul><p class="small-note">資格の正式名称・取得年月は公開前に確認してください。</p></div>
       </div>
     </section>
+    <section class="section" id="works" aria-labelledby="works-title">
+      <div class="container"><div class="section-heading"><p class="section-kicker">03 / PROJECTS</p><h2 id="works-title">Featured <span>Works</span></h2><p>学んだ技術を形にした制作物です。</p></div>
+        <div class="works-grid">
+          <article class="work-card"><div class="work-visual visual-one"><span class="visual-icon" aria-hidden="true">▤</span><span>SECURITY LOG ANALYSIS</span></div><div class="work-info"><p class="work-type">SECURITY / PYTHON</p><h3>AI Security Log Analyzer</h3><p>セキュリティログの分析をテーマにしたアプリです。ログ分析を身近に学ぶために制作しました。</p><a class="work-link" href="https://ai-security-log-analyzer-lee0720.streamlit.app/" target="_blank" rel="noopener noreferrer">アプリを見る ↗</a></div></article>
+          <article class="work-card"><div class="work-visual visual-two"><span class="visual-icon" aria-hidden="true">◎</span><span>SOC EXPERIENCE GAME</span></div><div class="work-info"><p class="work-type">SECURITY / LEARNING</p><h3>SOC体験ゲーム</h3><p>SOC（セキュリティオペレーションセンター）の業務を体験することをテーマにした学習用ゲームです。</p><a class="work-link" href="https://soc-log-defense-lee0720.streamlit.app/" target="_blank" rel="noopener noreferrer">アプリを見る ↗</a></div></article>
+          <article class="work-card"><div class="work-visual visual-three"><span class="visual-icon" aria-hidden="true">✓</span><span>TODO APPLICATION</span></div><div class="work-info"><p class="work-type">WEB APP / PYTHON</p><h3>ToDoアプリ</h3><p>Pythonのバックエンドを使ったタスク管理アプリです。Webアプリケーションの仕組みを学ぶために制作しました。</p><a class="work-link" href="https://todoapp-1-jaf6.onrender.com/" target="_blank" rel="noopener noreferrer">アプリを見る ↗</a></div></article>
+        </div>
+        <p class="small-note works-note">制作物のスクリーンショットやGitHubリポジトリへのリンクは、後から追加できます。</p>
+      </div>
+    </section>
+    <section class="section section-alt contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><p class="section-kicker">04 / CONTACT</p><h2 id="contact-title">Let's <span>Connect.</span></h2><p>制作物や技術への取り組みについては、GitHubからご覧いただけます。</p><div class="contact-actions"><a class="btn btn-primary" href="https://github.com/lee0720" target="_blank" rel="noopener noreferrer">GitHubを見る ↗</a></div><p class="small-note">メールアドレスやSNSは、公開範囲を確認してから追加しましょう。</p></div></section>
   </main>
-
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> Portfolio. All rights reserved.</p>
-  </footer>
-
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Kazutoshi Sakurai</span><a href="#hero">BACK TO TOP ↑</a></div></footer>
   <script>
-    (function () {
-      var yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      var toggle = document.querySelector('.nav-toggle');
-      var menu = document.querySelector('.nav-menu');
-      if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-          menu.classList.toggle('is-open');
-          toggle.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', menu.classList.contains('is-open'));
-        });
-      }
-
-      document.querySelectorAll('.nav-menu a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          if (menu) menu.classList.remove('is-open');
-          if (toggle) toggle.classList.remove('is-open');
-        });
-      });
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('is-open'); toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'メニューを開く');
+    }));
   </script>
 </body>
 </html>
